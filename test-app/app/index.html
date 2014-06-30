@@ -1,11 +1,14 @@
-<!doctype html>
-<html class="no-js">
+﻿<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>test app</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <link rel="shortcut icon" href="/favicon.ico">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
@@ -15,9 +18,7 @@
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
-        <!-- build:js scripts/vendor/modernizr.js -->
-        <script src="../bower_components/modernizr/modernizr.js"></script>
-        <!-- endbuild -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
 
     </head>
     <body>
@@ -31,7 +32,7 @@
           <p>You now have</p>
           <ul>
             <li>HTML5 Boilerplate</li>
-            <li>Sass</li>
+
             <li>Modernizr</li>
           </ul>
         </div>
@@ -39,7 +40,7 @@
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
-        <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/jquery/jquery.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -52,9 +53,12 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
-
+        <!-- ref:remove -->
+        <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+        <script src="dev-require-config.js"></script>
+        <!-- endref -->
         <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
+        <!--<script src="../dist/scripts/main.js"></script>-->
         <!-- endbuild -->
 </body>
 </html>
